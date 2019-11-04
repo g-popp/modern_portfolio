@@ -49,6 +49,15 @@ $background-opacity: 0.9;
 	}
 }
 
+// Set Text Color
+@function setTextColor($color) {
+	@if (lightness($color) > 40) {
+		@return #000;
+	} @else {
+		@return #fff;
+	}
+}
+
 @mixin mediaXl {
 	@media screen and (min-width: 1171px) {
 		@content;
